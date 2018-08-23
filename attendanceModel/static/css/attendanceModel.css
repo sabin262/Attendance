@@ -1,0 +1,14 @@
+h1 {
+	text-align: center;
+}
+
+#studentcard{
+	padding:  20px;
+	display: block;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color:rgba(179,179,179,1);
+    border-radius: 15px;
+    width: 500px;
+}

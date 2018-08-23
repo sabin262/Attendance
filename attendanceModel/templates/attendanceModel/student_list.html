@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Attendance</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/attendanceModel.css' %}">
+</head>
+<body>
+	<div>
+		<h1>Student List</h1>
+	</div>
+	{% for student in students %}
+			{% with attendance as attendance %}
+				<div class="container" id="studentcard">
+					ID: {{student.id}}<br>
+					Student ID: {{student.student_id}}<br>
+					Student Name: {{student.student_name}}<br>
+					Total Classes: {{attendance.total_class}} <br>
+					Total Present: {{a.total_present}}<br>
+					Total Absent: {{a.total_absent}}<br>
+				</div>
+			{% endwith %}
+	{% endfor %}
+</body>
+</html>
